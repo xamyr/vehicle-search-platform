@@ -15,16 +15,6 @@ use App\Livewire\Vehicles;
 |
 */
 
-Route::view('/', 'welcome');
-
-Route::get('/v', Vehicles::class);
-
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+Route::get('/', Vehicles::class)->name('dash');
 
 require __DIR__.'/auth.php';
